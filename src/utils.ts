@@ -21,10 +21,10 @@ export function exec (cmd: string, args: string[], { env, ...opts }: SpawnOption
 
   consola.log('Running', cmd, ...args)
 
-  return execa('npx', [cmd, ...args], {
+  return execa(cmd, args, {
     stdout: process.stdout,
     stderr: process.stderr,
-    preferLocal: false,
+    preferLocal: true,
     env: {
       MINIMAL: '1',
       NODE_OPTIONS: '--max_old_space_size=3000',
