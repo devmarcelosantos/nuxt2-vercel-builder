@@ -1,7 +1,7 @@
-import path from 'path'
 import type { SpawnOptions } from 'child_process'
+import path from 'path'
 
-import { glob, FileFsRef, PackageJson } from '@vercel/build-utils'
+import { FileFsRef, glob, PackageJson } from '@vercel/build-utils'
 import fs from 'fs-extra'
 import replaceInFile from 'replace-in-file'
 
@@ -21,7 +21,6 @@ interface PrepareTypescriptOptions {
     rootDir: string;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function prepareTypescriptEnvironment ({ pkg, spawnOpts, rootDir }: PrepareTypescriptOptions): Promise<void> {
   spawnOpts = { ...spawnOpts, env: { ...spawnOpts.env, NODE_PRESERVE_SYMLINKS: '1' } }
 

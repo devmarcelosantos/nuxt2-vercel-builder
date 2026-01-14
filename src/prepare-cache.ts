@@ -1,7 +1,7 @@
-import { PrepareCacheOptions, glob, Files } from '@vercel/build-utils'
+import { Files, PrepareCacheOptions, glob } from '@vercel/build-utils'
 import consola from 'consola'
 
-import { startStep, endStep } from './utils'
+import { endStep, startStep } from './utils'
 
 async function prepareCache ({ workPath }: PrepareCacheOptions): Promise<Files> {
   startStep('Collect cache')

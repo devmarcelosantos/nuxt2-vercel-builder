@@ -1,11 +1,11 @@
-import path from 'path'
 import { SpawnOptions } from 'child_process'
+import path from 'path'
 
-import { glob, Files, PackageJson } from '@vercel/build-utils'
+import { Files, glob, PackageJson } from '@vercel/build-utils'
 import consola from 'consola'
-import jiti from 'jiti'
 import execa, { ExecaReturnValue } from 'execa'
 import fs from 'fs-extra'
+import jiti from 'jiti'
 
 import type { NuxtConfig as NuxtConfiguration } from '@nuxt/types'
 import type { IOptions } from 'glob'

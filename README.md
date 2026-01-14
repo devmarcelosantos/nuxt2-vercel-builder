@@ -1,6 +1,6 @@
 ![vercel-builder](https://user-images.githubusercontent.com/904724/61308402-7a752d00-a7f0-11e9-9502-23731ccd00fd.png)
 
-# Nuxt Vercel Builder
+# Nuxt 2 - Vercel Builder
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
@@ -14,7 +14,7 @@
 
 ---
 
-`@nuxtjs/vercel-builder` allows you ship a fast, production-ready [Nuxt 2 application](https://nuxtjs.org) that scales automatically on Vercel when using SSR rendering.
+`@nuxt2/vercel-builder` allows you ship a fast, production-ready [Nuxt 2 application](https://nuxtjs.org) that scales automatically on Vercel when using SSR rendering.
 
 ### When to use it
 
