@@ -13,10 +13,7 @@
   "bugs": {
     "url": "https://github.com/nuxt/vercel-builder/issues"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nuxt/vercel-builder.git"
-  },
+  "repository": "https://github.com/devmarcelosantos/nuxt2-vercel-builder",
   "license": "MIT",
   "author": "devmarcelosantos",
   "exports": {
