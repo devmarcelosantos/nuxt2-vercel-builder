@@ -1,16 +1,16 @@
 import path from 'path'
 
-import { createLambda, BuildOptions, download, File, FileBlob, FileFsRef, glob, getNodeVersion, getSpawnOptions, Lambda, runNpmInstall, runPackageJsonScript } from '@vercel/build-utils'
+import { BuildOptions, createLambda, download, File, FileBlob, FileFsRef, getRuntimeNodeVersion, getSpawnOptions, glob, Lambda, runNpmInstall, runPackageJsonScript } from '@vercel/build-utils'
 import type { Route } from '@vercel/routing-utils'
 import consola from 'consola'
 import fs from 'fs-extra'
-import resolveFrom from 'resolve-from'
-import { gte, gt } from 'semver'
 import { update as updaterc } from 'rc9'
-import { hasProtocol, withTrailingSlash, withoutLeadingSlash } from 'ufo'
+import resolveFrom from 'resolve-from'
+import { gt, gte } from 'semver'
+import { hasProtocol, withoutLeadingSlash, withTrailingSlash } from 'ufo'
 
-import { endStep, exec, getNuxtConfig, getNuxtConfigName, globAndPrefix, MutablePackageJson, prepareNodeModules, backupNodeModules, preparePkgForProd, readJSON, startStep, validateEntrypoint } from './utils'
-import { prepareTypescriptEnvironment, compileTypescriptBuildFiles, JsonOptions } from './typescript'
+import { compileTypescriptBuildFiles, JsonOptions, prepareTypescriptEnvironment } from './typescript'
+import { backupNodeModules, endStep, exec, getNuxtConfig, getNuxtConfigName, globAndPrefix, MutablePackageJson, prepareNodeModules, preparePkgForProd, readJSON, startStep, validateEntrypoint } from './utils'
 
 interface BuilderOutput {
   watch?: string[];
@@ -63,7 +63,7 @@ export async function build (opts: BuildOptions & { config: NuxtBuilderConfig })
   }
 
   // Node version
-  const nodeVersion = await getNodeVersion(entrypointPath, undefined, {}, meta)
+  const nodeVersion = await getRuntimeNodeVersion(entrypointPath, undefined, {}, meta)
   const spawnOpts = getSpawnOptions(meta, nodeVersion)
 
   // Prepare TypeScript environment if required.
