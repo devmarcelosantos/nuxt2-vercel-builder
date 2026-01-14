@@ -1,8 +1,8 @@
 {
-  "name": "@devmarcelosantos/vercel-builder",
-  "version": "0.25.2",
+  "name": "@devmarcelosantos/nuxt2-vercel-builder",
+  "version": "0.25.3",
   "private": false,
-  "description": "Builder para o NuxtJS para a Vercel com Node v22 - Forked by @nuxtjs/vercel-builder",
+  "description": "Builder para o NuxtJS 2 para a Vercel com Node v22 - Forked by @nuxtjs/vercel-builder",
   "keywords": [
     "nuxtjs",
     "nuxt",
