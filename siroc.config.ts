@@ -1,7 +1,7 @@
-import { defineSirocConfig } from 'siroc'
+import { defineSirocConfig } from "siroc";
 
 export default defineSirocConfig({
   rollup: {
-    external: ['@vercel/build-utils']
-  }
-})
+    external: ["@vercel/build-utils"],
+  },
+});
